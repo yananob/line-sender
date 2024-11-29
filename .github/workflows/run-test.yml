@@ -1,7 +1,7 @@
 name: Run test for line-sender
 
-env:
-  target: line-sender
+# env:
+#   target: line-sender
 
 on:
   pull_request:
