@@ -18,9 +18,9 @@ on:
     - cron:  '50 21 * * 5'
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: line-sender
+# defaults:
+#   run:
+#     working-directory: .
 
 permissions:
   contents: read
