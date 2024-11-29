@@ -5,6 +5,6 @@ tmp/
 _deploy/
 
 # for PHP
-**/cache/
-**/templates_c/
-**/vendor/
+cache/
+templates_c/
+vendor/
