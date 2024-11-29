@@ -47,8 +47,8 @@ jobs:
     - name: Get current directory
       run: echo "$(pwd)"
 
-    - name: Get current directory
-      run: echo "$(ls)"
+    - name: ls
+      run: echo "$(ls cf-common)"
 
     - name: cat
       run: echo "$(cat phpstan.neon)"
