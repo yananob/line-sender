@@ -47,6 +47,9 @@ jobs:
     - name: Get current directory
       run: echo "$(pwd)"
 
+    - name: Get current directory
+      run: echo "$(ls)"
+
     # - name: Submodule
     #   run: git submodule add git@github.com:yananob/cloud-functions-common cf-common
 
