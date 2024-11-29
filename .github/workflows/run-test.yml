@@ -44,6 +44,9 @@ jobs:
       id: current_dir
       run: echo "CURRENT_DIR=$(pwd)" >> $GITHUB_OUTPUT
 
+    - name: Submodule
+      run: git submodule add git@github.com:yananob/cloud-functions-common cf-common
+
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v4
