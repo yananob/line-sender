@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b440e4a804e6738d6b48a7d4c77ba05",
+    "content-hash": "439329d9e53af78296d4ef27a2379d7e",
     "packages": [
         {
             "name": "cloudevents/sdk-php",
@@ -1563,17 +1563,17 @@
             "time": "2024-09-09T11:45:10+00:00"
         },
         {
-            "name": "yananob/my_gcptools",
+            "name": "yananob/my-gcp-tools",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yananob/my_gcptools.git",
-                "reference": "2795eb5dbd5353656636c3b6858667aef66cb58e"
+                "url": "https://github.com/yananob/my-gcp-tools.git",
+                "reference": "dd3d91f3a1131a5658ec7ba1426aef172cb010ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yananob/my_gcptools/zipball/2795eb5dbd5353656636c3b6858667aef66cb58e",
-                "reference": "2795eb5dbd5353656636c3b6858667aef66cb58e",
+                "url": "https://api.github.com/repos/yananob/my-gcp-tools/zipball/dd3d91f3a1131a5658ec7ba1426aef172cb010ab",
+                "reference": "dd3d91f3a1131a5658ec7ba1426aef172cb010ab",
                 "shasum": ""
             },
             "require": {
@@ -1587,28 +1587,28 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "yananob\\my_gcptools\\": "src/"
+                    "yananob\\MyGcpTools\\": "src/"
                 }
             },
             "description": "My GCP-related tools",
             "support": {
-                "source": "https://github.com/yananob/my_gcptools/tree/main",
-                "issues": "https://github.com/yananob/my_gcptools/issues"
+                "source": "https://github.com/yananob/my-gcp-tools/tree/main",
+                "issues": "https://github.com/yananob/my-gcp-tools/issues"
             },
-            "time": "2024-07-07T08:31:36+00:00"
+            "time": "2024-12-08T13:51:31+00:00"
         },
         {
-            "name": "yananob/mytools",
+            "name": "yananob/my-tools",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yananob/mytools.git",
-                "reference": "9f84988ca763cff36387e05de4afa438465bc913"
+                "url": "https://github.com/yananob/my-tools.git",
+                "reference": "a17fa120dac41fd1a3bedd6282785fb853a4d556"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yananob/mytools/zipball/9f84988ca763cff36387e05de4afa438465bc913",
-                "reference": "9f84988ca763cff36387e05de4afa438465bc913",
+                "url": "https://api.github.com/repos/yananob/my-tools/zipball/a17fa120dac41fd1a3bedd6282785fb853a4d556",
+                "reference": "a17fa120dac41fd1a3bedd6282785fb853a4d556",
                 "shasum": ""
             },
             "require": {
@@ -1623,15 +1623,15 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "yananob\\mytools\\": "src/"
+                    "yananob\\MyTools\\": "src/"
                 }
             },
             "description": "My tools",
             "support": {
-                "source": "https://github.com/yananob/mytools/tree/main",
-                "issues": "https://github.com/yananob/mytools/issues"
+                "source": "https://github.com/yananob/my-tools/tree/main",
+                "issues": "https://github.com/yananob/my-tools/issues"
             },
-            "time": "2024-12-08T08:24:16+00:00"
+            "time": "2024-12-08T13:57:51+00:00"
         }
     ],
     "packages-dev": [
@@ -3321,8 +3321,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "yananob/mytools": 20,
-        "yananob/my_gcptools": 20
+        "yananob/my-tools": 20,
+        "yananob/my-gcp-tools": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

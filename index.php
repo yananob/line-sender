@@ -6,9 +6,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use Google\CloudFunctions\FunctionsFramework;
 use Psr\Http\Message\ServerRequestInterface;
-use yananob\mytools\Logger;
-use yananob\mytools\Line;
-use yananob\my_gcptools\CFUtils;
+use yananob\MyTools\Logger;
+use yananob\MyTools\Line;
+use yananob\MyGcpTools\CFUtils;
 
 FunctionsFramework::http('main', 'main');
 function main(ServerRequestInterface $request): string
