@@ -25,6 +25,7 @@ function main(ServerRequestInterface $request): string
 
     $line = new Line(__DIR__ . "/configs/line.json");
     $smarty = new Smarty();
+    $smarty->setTemplateDir(__DIR__ . "/templates");
     $smarty->assign("targets", $line->getTargets());
 
     if (empty($body)) {
