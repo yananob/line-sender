@@ -10,6 +10,9 @@
 
 <body>
     <div class="container mt-5">
+        {if !empty($notification)}
+        <div class="alert alert-primary" role="alert">{$notification}</div>
+        {/if}
 
         <form method="POST" action=".">
             <div class="mb-3">
