@@ -20,17 +20,18 @@ function main(ServerRequestInterface $request): string
     $logger->log("Query: " . json_encode($query));
     $logger->log("Body: " . json_encode($body));
 
-    // $smarty = new Smarty();
-    // $smarty->setTemplateDir(__DIR__ . "/templates");
-
     $isLocal = CFUtils::isLocalHttp($request);
     $logger->log("Running as " . ($isLocal ? "local" : "cloud") . " mode");
 
-    if (empty($body)) {
-        // TODO: GUIの表示
-        $logger->log("GET");
+    $line = new Line(__DIR__ . "/configs/line.json");
+    $smarty = new Smarty();
+    $smarty->setTemplateDir(__DIR__ . "/templates");
+    $smarty->assign("targets", $line->getTargets());
+    $smarty->assign("baseUrl", CFUtils::getBaseUrl($isLocal, $request));
 
-        return "Done";
+    if (empty($body)) {
+        $logger->log("GET");
+        return $smarty->fetch('form.tpl');
     } else {
         $logger->log("POST");
         if (!array_key_exists("target", $body)) {
@@ -42,10 +43,18 @@ function main(ServerRequestInterface $request): string
         $target = $body["target"];
         $message = $body["message"];
 
-        $line = new Line(__DIR__ . "/configs/line.json");
         // MEMO: UIのシンプル化のために、botとtargetが同じであることを前提にしている
-        $line->sendMessage($target, $target, $message);
+        $line->sendMessage(
+            bot: $target,
+            target: $target,
+            message: $message,
+        );
 
-        return "";
+        if (array_key_exists("source", $body) && $body["source"] === "form") {
+            $smarty->assign("notification", "Message was successfully sent!");
+            return $smarty->fetch('form.tpl');
+        } else {
+            return "";
+        }
     }
 }
