@@ -14,7 +14,7 @@
         <div class="alert alert-primary" role="alert">{$notification}</div>
         {/if}
 
-        <form method="POST" action=".">
+        <form method="POST" action="{$baseUrl}">
             <div class="mb-3">
                 <label class="form-label">Target:</label><br>
                 {foreach from=$targets item=target}

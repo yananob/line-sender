@@ -27,6 +27,7 @@ function main(ServerRequestInterface $request): string
     $smarty = new Smarty();
     $smarty->setTemplateDir(__DIR__ . "/templates");
     $smarty->assign("targets", $line->getTargets());
+    $smarty->assign("baseUrl", CFUtils::getBaseUrl($isLocal, $request));
 
     if (empty($body)) {
         $logger->log("GET");
